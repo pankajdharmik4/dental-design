@@ -17,16 +17,38 @@ const NavBar = () => {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ backgroundColor: '#13192d', height: 'auto', top: 0 }}>
-        <Toolbar sx={{ height: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-          {/* Logo on the left */}
-          <IconButton edge="start" sx={{ padding: 0 }}>
-            <img src={Logo} alt="Logo" style={{ width: 300, height: 90, objectFit: 'contain' }} />
+      <AppBar position="sticky" sx={{ backgroundColor: '#13192d', height: 'auto', top: 0,paddingTop:'1%',paddingBottom:'1%' }}>
+        <Toolbar
+          sx={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: isMobile ? 'row' : 'row',
+            alignItems: 'center',
+            justifyContent: isMobile ? 'center' : 'space-between',
+          }}
+        >
+          {/* Logo */}
+          <IconButton
+            edge="start"
+            sx={{
+              padding: 0,
+              ...(isMobile && { justifyContent: 'center', flex: 1 }),
+            }}
+          >
+            <img
+              src={Logo}
+              alt="Logo"
+              style={{
+                width: isMobile ? 200 : 300,
+                height: isMobile ? 60 : 90,
+                objectFit: 'contain',
+              }}
+            />
           </IconButton>
 
           {/* Menu Icon for mobile */}
           {isMobile && (
-            <IconButton edge="end" onClick={toggleDrawer(true)} sx={{ color: 'white' }}>
+            <IconButton edge="end" onClick={toggleDrawer(true)} sx={{ color: 'white', position: 'absolute', right: 16 }}>
               <MenuIcon />
             </IconButton>
           )}
@@ -34,23 +56,23 @@ const NavBar = () => {
           {/* Navigation links */}
           {!isMobile && (
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                {/* <a href="https://facebook.com" style={{ color: 'white', textDecoration: 'none' }}>
-                  <IconButton color="inherit">
-                    <FacebookIcon />
-                  </IconButton>
-                </a>
-                <a href="https://twitter.com" style={{ color: 'white', textDecoration: 'none' }}>
-                  <IconButton color="inherit">
-                    <TwitterIcon />
-                  </IconButton>
-                </a>
-                <a href="https://instagram.com" style={{ color: 'white', textDecoration: 'none' }}>
-                  <IconButton color="inherit">
-                    <InstagramIcon />
-                  </IconButton>
-                </a> */}
-              </Box>
+            {/* //   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            //     <a href="https://facebook.com" style={{ color: 'white', textDecoration: 'none' }}>
+            //       <IconButton color="inherit">
+            //         <FacebookIcon />
+            //       </IconButton>
+            //     </a>
+            //     <a href="https://twitter.com" style={{ color: 'white', textDecoration: 'none' }}>
+            //       <IconButton color="inherit">
+            //         <TwitterIcon />
+            //       </IconButton>
+            //     </a>
+            //     <a href="https://instagram.com" style={{ color: 'white', textDecoration: 'none' }}>
+            //       <IconButton color="inherit">
+            //         <InstagramIcon />
+            //       </IconButton>
+            //     </a>
+            //   </Box> */}
               <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
                 <a href="#gallery" style={{ color: 'white', textDecoration: 'none' }}>
                   <Button color="inherit" size="large">Gallery</Button>
