@@ -4,7 +4,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, B
 import backgroundVideo from '../assets/2.mp4';
 
 export const Header = (props) => {
-  const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(true);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -66,24 +66,26 @@ export const Header = (props) => {
 
 const ConsultationForm = ({ open, onClose }) => {
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
-      <DialogTitle>Consultation Form</DialogTitle>
+    <Dialog open={open} onClose={onClose} maxWidth="sm" width={"80%"}>
+      <DialogTitle marginBottom={1}>Consultation Form</DialogTitle>
       <DialogContent>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <TextField label="Name" variant="outlined" fullWidth required />
           <TextField label="Email" type="email" variant="outlined" fullWidth required />
           <Box sx={{ display: 'flex', gap: 2 }}>
             <TextField label="Phone Number" type="tel" variant="outlined" fullWidth required />
-            <TextField label="Preferred Consultation Date/Time" type="datetime-local" variant="outlined" fullWidth required />
+            <TextField
+              // label="Preferred Consultation Date/Time" 
+              type="datetime-local" variant="outlined" fullWidth required />
           </Box>
           <TextField label="Additional Comments" multiline rows={4} variant="outlined" fullWidth />
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose} color="secondary">
+        <Button variant="outlined" onClick={onClose} color="primary">
           Cancel
         </Button>
-        <Button type="submit" color="primary">
+        <Button variant="contained" type="submit" color="primary">
           Submit
         </Button>
       </DialogActions>

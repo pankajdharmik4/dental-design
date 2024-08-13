@@ -35,7 +35,7 @@ const NavBar = () => {
           {!isMobile && (
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                <a href="https://facebook.com" style={{ color: 'white', textDecoration: 'none' }}>
+                {/* <a href="https://facebook.com" style={{ color: 'white', textDecoration: 'none' }}>
                   <IconButton color="inherit">
                     <FacebookIcon />
                   </IconButton>
@@ -49,7 +49,7 @@ const NavBar = () => {
                   <IconButton color="inherit">
                     <InstagramIcon />
                   </IconButton>
-                </a>
+                </a> */}
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
                 <a href="#gallery" style={{ color: 'white', textDecoration: 'none' }}>
