@@ -142,6 +142,9 @@ const NavBar = () => {
             <ListItem button>
               <ListItemText primary={<a href="#contact" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Contact</a>} />
             </ListItem>
+            <ListItem button>
+              <ListItemText primary={<a href="#contact" style={{ display:"flex", alignItems:"center", color: 'white', fontWeight: 'bold', textDecoration: 'none' }}> <CallIcon />  {'+1 123 456 789'}</a>} />
+            </ListItem>
           </List>
         </Box>
       </Drawer>
