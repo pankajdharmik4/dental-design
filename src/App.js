@@ -11,6 +11,7 @@ import { HowitWork } from './components/HowitWork';
 import { Testimonials } from './components/Testimonials';
 import { QnA } from './components/QnA';
 import { Contact } from './components/Contact';
+import { TeamSection } from './components/TeamSection';
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
       <Features data={JsonData.Features} />
       <About data={JsonData.About} />
       <HowitWork data={JsonData.Services} />
+      <TeamSection />
       <Testimonials data={JsonData.Testimonials} />
       <QnA data={JsonData.Team} />
       <Contact data={JsonData.Contact} />

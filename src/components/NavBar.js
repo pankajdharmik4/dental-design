@@ -90,7 +90,7 @@ const NavBar = () => {
                   <Button color="inherit" size="large">Testimonials</Button>
                 </a>
                 <a href="#qna" style={{ color: 'white', textDecoration: 'none' }}>
-                  <Button color="inherit" size="large">QnA</Button>
+                  <Button color="inherit" size="large">FAQ</Button>
                 </a>
                 <a href="#contact" style={{ color: 'white', textDecoration: 'none' }}>
                   <Button color="inherit" size="large">Contact</Button>
