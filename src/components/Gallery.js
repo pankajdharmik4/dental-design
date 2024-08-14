@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import afterImage from '../assets/001.jpg';
 
-const afterImageURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBQ77-HkHcniJPT2chQC81ANv140C32CPOfQ&s";
+// const afterImageURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBQ77-HkHcniJPT2chQC81ANv140C32CPOfQ&s";
 
 export const Gallery = ({ data }) => {
   const [centerSlidePercentage, setCenterSlidePercentage] = useState(33.33);
@@ -51,10 +51,24 @@ export const Gallery = ({ data }) => {
           centerSlidePercentage={centerSlidePercentage}
           swipeable
           emulateTouch
-          sx={{ width: '100%' }}
+          sx={{ width: '50%' }}
+          renderArrowPrev={(onClickHandler, hasPrev, label) =>
+            hasPrev && (
+              <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 0 }}>
+                ◀
+              </button>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 0 }}>
+                ▶
+              </button>
+            )
+          }
         >
           {data.map((image, index) => (
-            <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',margin:'15px' }}>
+            <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '15px' }}>
               <Box sx={{ width: '100%', maxWidth: '600px', position: 'relative' }}>
                 <ReactCompareSlider
                   itemOne={<ReactCompareSliderImage src={image.largeImage} alt="Before" />}
@@ -71,4 +85,16 @@ export const Gallery = ({ data }) => {
       </Box>
     </Box>
   );
+};
+
+const arrowStyles = {
+  position: 'absolute',
+  top: '40%',
+  transform: 'translateY(-50%)',
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  color: 'white',
+  border: 'none',
+  padding: '20px',
+  cursor: 'pointer',
+  zIndex: 2,
 };
