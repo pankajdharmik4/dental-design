@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Logo from '../assets/logo.png';
 import { AppBar, Toolbar, IconButton, Box, Button, Drawer, List, ListItem, ListItemText, useTheme, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import TwitterIcon from '@mui/icons-material/Twitter';
+// import InstagramIcon from '@mui/icons-material/Instagram';
+import CallIcon from '@mui/icons-material/Call';
 
 const NavBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -17,7 +18,7 @@ const NavBar = () => {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ backgroundColor: '#13192d', height: 'auto', top: 0,paddingTop:'1%',paddingBottom:'1%' }}>
+      <AppBar position="sticky" sx={{ backgroundColor: '#13192d', height: 'auto', top: 0, paddingTop: '1%', paddingBottom: '1%' }}>
         <Toolbar
           sx={{
             height: '100%',
@@ -56,7 +57,7 @@ const NavBar = () => {
           {/* Navigation links */}
           {!isMobile && (
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {/* //   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              {/* //   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             //     <a href="https://facebook.com" style={{ color: 'white', textDecoration: 'none' }}>
             //       <IconButton color="inherit">
             //         <FacebookIcon />
@@ -94,6 +95,11 @@ const NavBar = () => {
                 </a>
                 <a href="#contact" style={{ color: 'white', textDecoration: 'none' }}>
                   <Button color="inherit" size="large">Contact</Button>
+                </a>
+                <a href="https://facebook.com" style={{ color: 'white', textDecoration: 'none' }}>
+                  <IconButton color="inherit">
+                    <Button startIcon={<CallIcon />} color="inherit" size="large">+1 123 456 789</Button>
+                  </IconButton>
                 </a>
               </Box>
             </Box>
