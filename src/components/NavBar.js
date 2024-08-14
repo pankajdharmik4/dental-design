@@ -137,7 +137,7 @@ const NavBar = () => {
               <ListItemText primary={<a href="#testimonials" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Testimonials</a>} />
             </ListItem>
             <ListItem button>
-              <ListItemText primary={<a href="#qna" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>QnA</a>} />
+              <ListItemText primary={<a href="#qna" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>FAQ</a>} />
             </ListItem>
             <ListItem button>
               <ListItemText primary={<a href="#contact" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Contact</a>} />
