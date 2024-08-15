@@ -25,11 +25,9 @@ function App() {
       <About data={JsonData.About} />
       <HowitWork data={JsonData.Services} />
       <TeamSection />
-      <Testimonials data={JsonData.Testimonials} />
       <QnA data={JsonData.Team} />
+      <Testimonials data={JsonData.Testimonials} />
       <Contact data={JsonData.Contact} />
-
-
     </div>
   );
 }
