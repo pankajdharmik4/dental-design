@@ -89,7 +89,7 @@ const ConsultationForm = ({ open, onClose }) => {
       open={open}
       onClose={onClose}
       maxWidth="sm"
-      disableScrollLock // Add this line to enable scrolling
+      // disableScrollLock // Add this line to enable scrolling
       sx={{
         '& .MuiPaper-root': {
           border: '2px solid #13192d', // Add border effect
