@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Box, Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Box, Typography, IconButton, useTheme, useMediaQuery } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 import backgroundVideo from '../assets/2.mp4';
 
 export const Header = (props) => {
@@ -66,29 +67,200 @@ export const Header = (props) => {
 
 const ConsultationForm = ({ open, onClose }) => {
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="sm" width={"80%"}>
-      <DialogTitle marginBottom={1}>Consultation Form</DialogTitle>
+    <Dialog
+      open={open}
+      onClose={onClose}
+      maxWidth="sm"
+      sx={{
+        '& .MuiPaper-root': {
+          border: '2px solid #13192d', // Add border effect
+        }
+      }}
+    >
+      <DialogTitle
+        marginBottom={1}
+        sx={{
+          backgroundColor: '#13192d',
+          color: 'white'
+        }}
+      >
+        Consultation Form
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: "white",
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
       <DialogContent>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-          <TextField label="Name" variant="outlined" fullWidth required />
-          <TextField label="Email" type="email" variant="outlined" fullWidth required />
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mt: 2 }}>
+          <TextField
+            label="Name"
+            variant="outlined"
+            fullWidth
+            required
+            InputLabelProps={{ style: { color: '#13192d' } }}
+            InputProps={{
+              sx: {
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: '#13192d',
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#13192d',
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#13192d',
+                  },
+                },
+                '& .MuiInputBase-input::placeholder': {
+                  color: '#13192d',
+                },
+              },
+            }}
+          />
+          <TextField
+            label="Email"
+            type="email"
+            variant="outlined"
+            fullWidth
+            required
+            InputLabelProps={{ style: { color: '#13192d' } }}
+            InputProps={{
+              sx: {
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: '#13192d',
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#13192d',
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#13192d',
+                  },
+                },
+                '& .MuiInputBase-input::placeholder': {
+                  color: '#13192d',
+                },
+              },
+            }}
+          />
           <Box sx={{ display: 'flex', gap: 2 }}>
-            <TextField label="Phone Number" type="tel" variant="outlined" fullWidth required />
+            <TextField
+              label="Phone Number"
+              type="tel"
+              variant="outlined"
+              fullWidth
+              required
+              InputLabelProps={{ style: { color: '#13192d' } }}
+              InputProps={{
+                sx: {
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: '#13192d',
+                    },
+                    '&:hover fieldset': {
+                      borderColor: '#13192d',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#13192d',
+                    },
+                  },
+                  '& .MuiInputBase-input::placeholder': {
+                    color: '#13192d',
+                  },
+                },
+              }}
+            />
             <TextField
               // label="Preferred Consultation Date/Time" 
-              type="datetime-local" variant="outlined" fullWidth required />
+              type="datetime-local"
+              variant="outlined"
+              fullWidth
+              required
+              InputLabelProps={{ style: { color: '#13192d' } }}
+              InputProps={{
+                sx: {
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: '#13192d',
+                    },
+                    '&:hover fieldset': {
+                      borderColor: '#13192d',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#13192d',
+                    },
+                  },
+                  '& .MuiInputBase-input::placeholder': {
+                    color: '#13192d',
+                  },
+                },
+              }}
+            />
           </Box>
-          <TextField label="Additional Comments" multiline rows={4} variant="outlined" fullWidth />
+          <TextField
+            label="Additional Comments"
+            multiline
+            rows={4}
+            variant="outlined"
+            fullWidth
+            InputLabelProps={{ style: { color: '#13192d' } }}
+            InputProps={{
+              sx: {
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: '#13192d',
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#13192d',
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#13192d',
+                  },
+                },
+                '& .MuiInputBase-input::placeholder': {
+                  color: '#13192d',
+                },
+              },
+            }}
+          />
         </Box>
       </DialogContent>
-      <DialogActions>
-        <Button variant="outlined" onClick={onClose} color="primary">
+      <DialogActions sx={{ mt: 2, gap: 1 }}>
+        <Button
+          variant="outlined"
+          onClick={onClose}
+          sx={{
+            color: '#13192d',
+            borderColor: '#13192d',
+            '&:hover': {
+              borderColor: '#192655', // Update hover background color
+            }
+          }}
+        >
           Cancel
         </Button>
-        <Button variant="contained" type="submit" color="primary">
+        <Button
+          variant="contained"
+          type="submit"
+          sx={{
+            backgroundColor: '#13192d',
+            '&:hover': {
+              backgroundColor: '#192655', // Update hover background color
+            }
+          }}
+        >
           Submit
         </Button>
       </DialogActions>
+
     </Dialog>
   );
 };
