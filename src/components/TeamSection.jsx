@@ -27,7 +27,7 @@ const teamMembers = [
 
 export const TeamSection = () => {
     return (
-        <Box sx={{ backgroundColor: '#f5f5f5', py: 8 }}>
+        <Box id="team" sx={{ backgroundColor: '#f5f5f5', py: 8 }}>
             <Box sx={{ maxWidth: '1200px', margin: '0 auto', px: 2 }}>
                 <Box sx={{ textAlign: 'center', mb: 4 }}>
                     <Typography

@@ -85,13 +85,16 @@ const NavBar = () => {
                   <Button color="inherit" size="large">About</Button>
                 </a>
                 <a href="#services" style={{ color: 'white', textDecoration: 'none' }}>
-                  <Button color="inherit" size="large">Services</Button>
+                  <Button color="inherit" size="large">Invisalign</Button>
                 </a>
-                <a href="#testimonials" style={{ color: 'white', textDecoration: 'none' }}>
-                  <Button color="inherit" size="large">Testimonials</Button>
+                <a href="#team" style={{ color: 'white', textDecoration: 'none' }}>
+                  <Button color="inherit" size="large">Our Team</Button>
                 </a>
                 <a href="#qna" style={{ color: 'white', textDecoration: 'none' }}>
                   <Button color="inherit" size="large">FAQ</Button>
+                </a>
+                <a href="#testimonials" style={{ color: 'white', textDecoration: 'none' }}>
+                  <Button color="inherit" size="large">Testimonials</Button>
                 </a>
                 <a href="#contact" style={{ color: 'white', textDecoration: 'none' }}>
                   <Button color="inherit" size="large">Contact</Button>
@@ -131,13 +134,16 @@ const NavBar = () => {
               <ListItemText primary={<a href="#about" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>About</a>} />
             </ListItem>
             <ListItem button>
-              <ListItemText primary={<a href="#services" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Services</a>} />
+              <ListItemText primary={<a href="#services" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Invisalign</a>} />
             </ListItem>
             <ListItem button>
-              <ListItemText primary={<a href="#testimonials" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Testimonials</a>} />
+              <ListItemText primary={<a href="#team" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Our Team</a>} />
             </ListItem>
             <ListItem button>
               <ListItemText primary={<a href="#qna" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>FAQ</a>} />
+            </ListItem>
+            <ListItem button>
+              <ListItemText primary={<a href="#testimonials" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Testimonials</a>} />
             </ListItem>
             <ListItem button>
               <ListItemText primary={<a href="#contact" style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Contact</a>} />
