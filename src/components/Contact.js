@@ -48,7 +48,7 @@ const Footer = (props) => {
             Quick links
           </Typography>
           <Typography variant="body1" sx={{ mb: 1 }}>
-            <a href="#about" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>HOME</a>
+            <a href="#header" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>HOME</a>
           </Typography>
           <Typography variant="body1" sx={{ mb: 1 }}>
             <a href="#gallery" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>GALLERY</a>
@@ -57,10 +57,10 @@ const Footer = (props) => {
             <a href="#features" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>FEATURES</a>
           </Typography>
           <Typography variant="body1" sx={{ mb: 1 }}>
-            <a href="#about" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>FAQ</a>
+            <a href="#qna" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>FAQ</a>
           </Typography>
           <Typography variant="body1" sx={{ mb: 1 }}>
-            <a href="#contact" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>OUR TEAM</a>
+            <a href="#team" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>OUR TEAM</a>
           </Typography>
           <Typography variant="body1" sx={{ mb: 1 }}>
             <a href="#contact" style={{ color: 'white', textDecoration: 'none', margin: '0 10px' }}>CONTACT US</a>
@@ -110,22 +110,23 @@ const Footer = (props) => {
 export const Contact = (props) => {
 
   return (
-    <Box id="contact" sx={{ backgroundColor: '#13192d', color: '#fff', py: 4 }}>
-      <Box paddingX={3}>
-        <GetInTouch />
-        <Divider sx={{ my: 3, bgcolor: '#fff' }} />
-        <Footer props={props} />
-      </Box>
-      <Box sx={{ backgroundColor: '#f6f6f6', textAlign: 'center', mt: 2 }}>
-        <Typography variant="body2" sx={{ color: '#888' }}>
-          Copyright &copy; 2024 Invasign All rights reserved
-        </Typography>
-        <Box sx={{ mt: 2 }}>
-          <a href="#about" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>About Us</a>
-          <a href="#services" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>Services</a>
-          <a href="#blog" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>Blog</a>
-          <a href="#privacy-policy" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>Privacy Policy</a>
-          <a href="#privacy-policy" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>Terms & Conditions</a>
+    <Box paddingTop={4}>
+      <GetInTouch />
+      <Box id="contact" sx={{ backgroundColor: '#13192d', color: '#fff', py: 4 }}>
+        <Box paddingX={3}>
+          <Footer props={props} />
+        </Box>
+        <Box sx={{ backgroundColor: '#f6f6f6', textAlign: 'center', mt: 2 }}>
+          <Typography variant="body2" sx={{ color: '#888' }}>
+            Copyright &copy; 2024 Invasign All rights reserved
+          </Typography>
+          <Box sx={{ mt: 2 }}>
+            <a href="#about" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>About Us</a>
+            <a href="#services" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>Services</a>
+            <a href="#blog" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>Blog</a>
+            <a href="#privacy-policy" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>Privacy Policy</a>
+            <a href="#privacy-policy" style={{ color: '#13192d', textDecoration: 'none', margin: '0 10px' }}>Terms & Conditions</a>
+          </Box>
         </Box>
       </Box>
     </Box>
@@ -161,14 +162,21 @@ const GetInTouch = () => {
   return (
     <Box paddingX={3}>
       <Box sx={{ textAlign: 'center', mb: 6 }}>
-        <Typography variant="h4" sx={{ color: '#fff', mb: 2 }}>
+        <Typography variant="h4" sx={{
+          fontWeight: 'bold',
+          position: 'relative',
+          display: 'inline-block',
+          mb: 2,
+          borderBottom: '4px solid #13192d' // Adjust thickness and color as needed
+        }}
+          gutterBottom>
           Get In Touch
         </Typography>
-        <Typography variant="body1" sx={{ color: '#fff', mb: 4 }}>
+        <Typography variant="h6" component="h3" sx={{ mb: 1 }}>
           Please fill out the form below to send us an email, and we will get back to you as soon as possible.
         </Typography>
       </Box>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} marginBottom={2}>
         <Grid item xs={12} md={12}>
           <Paper elevation={3} sx={{ p: 4, bgcolor: '#fff', color: '#000' }}>
             <form name="sentMessage" onSubmit={handleSubmit}>

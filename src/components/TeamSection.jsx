@@ -24,13 +24,13 @@ const teamMembers = [
         name: 'Jane Smith',
         experience: '8 years',
         introduction: 'Jane is a project manager who ensures everything runs smoothly.',
-        image: 'https://img.freepik.com/premium-photo/doctor-physician-person-concept_1194-605094.jpg?size=626&ext=jpg&ga=GA1.1.839097493.1723665678&semt=ais_hybrid'
+        image: 'https://img.freepik.com/free-photo/healthcare-workers-preventing-virus-quarantine-campaign-concept-cheerful-friendly-asian-female-physician-doctor-with-clipboard-during-daily-checkup-standing-white-background_1258-107867.jpg?size=626&ext=jpg&ga=GA1.1.839097493.1723665678&semt=ais_hybrid'
     },
     {
         name: 'John Doe',
         experience: '5 years',
         introduction: 'John is a seasoned developer with expertise in frontend technologies.',
-        image: 'https://img.freepik.com/free-photo/portrait-friendly-smiling-male-doctor-man_171337-5064.jpg?size=626&ext=jpg&ga=GA1.1.839097493.1723665678&semt=ais_hybrid'
+        image: 'https://img.freepik.com/free-photo/hospital-healthcare-workers-covid-19-treatment-concept-young-doctor-scrubs-making-daily-errands-clinic-listening-patient-symptoms-look-camera-professional-physician-curing-diseases_1258-57233.jpg?size=626&ext=jpg&ga=GA1.1.839097493.1723665678&semt=ais_hybrid'
     },
     // Add more team members as needed
 ];
