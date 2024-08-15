@@ -9,15 +9,19 @@ import afterImage from '../assets/001.jpg';
 
 export const Gallery = ({ data }) => {
   const [centerSlidePercentage, setCenterSlidePercentage] = useState(33.33);
+  const [isSwipeable, setIsSwipeable] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setCenterSlidePercentage(100);
+        setIsSwipeable(false);
       } else if (window.innerWidth < 1024) {
         setCenterSlidePercentage(50);
+        setIsSwipeable(true);
       } else {
         setCenterSlidePercentage(33.33);
+        setIsSwipeable(true);
       }
     };
 
@@ -49,8 +53,8 @@ export const Gallery = ({ data }) => {
           interval={3000}
           centerMode
           centerSlidePercentage={centerSlidePercentage}
-          swipeable
-          emulateTouch
+          swipeable={isSwipeable}
+          emulateTouch={isSwipeable}
           sx={{ width: '50%' }}
           renderArrowPrev={(onClickHandler, hasPrev, label) =>
             hasPrev && (
