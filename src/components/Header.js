@@ -64,13 +64,32 @@ export const Header = (props) => {
     </header>
   );
 };
-
 const ConsultationForm = ({ open, onClose }) => {
+  const styleInputProps = {
+    sx: {
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+          borderColor: '#13192d',
+        },
+        '&:hover fieldset': {
+          borderColor: '#13192d',
+        },
+        '&.Mui-focused fieldset': {
+          borderColor: '#13192d',
+        },
+      },
+      '& .MuiInputBase-input::placeholder': {
+        color: '#13192d',
+      },
+    },
+  };
+
   return (
     <Dialog
       open={open}
       onClose={onClose}
       maxWidth="sm"
+      disableScrollLock // Add this line to enable scrolling
       sx={{
         '& .MuiPaper-root': {
           border: '2px solid #13192d', // Add border effect
@@ -106,24 +125,7 @@ const ConsultationForm = ({ open, onClose }) => {
             fullWidth
             required
             InputLabelProps={{ style: { color: '#13192d' } }}
-            InputProps={{
-              sx: {
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: '#13192d',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: '#13192d',
-                  },
-                  '&.Mui-focused fieldset': {
-                    borderColor: '#13192d',
-                  },
-                },
-                '& .MuiInputBase-input::placeholder': {
-                  color: '#13192d',
-                },
-              },
-            }}
+            InputProps={styleInputProps}
           />
           <TextField
             label="Email"
@@ -132,24 +134,7 @@ const ConsultationForm = ({ open, onClose }) => {
             fullWidth
             required
             InputLabelProps={{ style: { color: '#13192d' } }}
-            InputProps={{
-              sx: {
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: '#13192d',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: '#13192d',
-                  },
-                  '&.Mui-focused fieldset': {
-                    borderColor: '#13192d',
-                  },
-                },
-                '& .MuiInputBase-input::placeholder': {
-                  color: '#13192d',
-                },
-              },
-            }}
+            InputProps={styleInputProps}
           />
           <Box sx={{ display: 'flex', gap: 2 }}>
             <TextField
@@ -212,24 +197,7 @@ const ConsultationForm = ({ open, onClose }) => {
             variant="outlined"
             fullWidth
             InputLabelProps={{ style: { color: '#13192d' } }}
-            InputProps={{
-              sx: {
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: '#13192d',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: '#13192d',
-                  },
-                  '&.Mui-focused fieldset': {
-                    borderColor: '#13192d',
-                  },
-                },
-                '& .MuiInputBase-input::placeholder': {
-                  color: '#13192d',
-                },
-              },
-            }}
+            InputProps={styleInputProps}
           />
         </Box>
       </DialogContent>
@@ -260,7 +228,6 @@ const ConsultationForm = ({ open, onClose }) => {
           Submit
         </Button>
       </DialogActions>
-
     </Dialog>
   );
 };
