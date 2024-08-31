@@ -3,19 +3,16 @@ import { Box, Container, Typography, Accordion, AccordionSummary, AccordionDetai
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const qnaData = [
-  { question: "What is the fee for Patient Examination?", answer: "The private fee starts from £53.00. It's included in both Denplan Care and Denplan Essentials." },
-  { question: "How much does a Private Cosmetic Consultation cost?", answer: "A Private Cosmetic Consultation starts from £175.00. This is not included in Denplan Care or Denplan Essentials." },
-  { question: "What's the cost for a Private Implant Consultation?", answer: "A Private Implant Consultation starts from £175.00. This is not included in Denplan Care or Denplan Essentials." },
-  { question: "How much does a Private Endodontic Consultation cost?", answer: "A Private Endodontic Consultation starts from £175.00. This is not included in Denplan Care or Denplan Essentials." },
-  { question: "What's the fee for CBCT Scanner & Scans?", answer: "CBCT Scanner & Scans start from £206.00. This is not included in Denplan Care or Denplan Essentials." },
-  { question: "How much do Routine X-rays cost?", answer: "Routine X-rays start from £18.50. They are included in both Denplan Care and Denplan Essentials." },
-  { question: "What's the cost for Non-Routine X-rays?", answer: "Non-Routine X-rays start from £18.50. They are included in Denplan Care but not in Denplan Essentials." },
-  { question: "How much do Fillings cost?", answer: "Fillings start from £128.00. They are included in Denplan Care but not in Denplan Essentials." },
-  { question: "What's the fee for Root Canal Fillings?", answer: "Root Canal Fillings start from £215.00. They are included in Denplan Care but not in Denplan Essentials." },
-  { question: "How much do Crowns cost?", answer: "Crowns start from £574.00. For Denplan Care, only the lab fee is charged. They are not included in Denplan Essentials." },
-  { question: "What's the cost for Dentures?", answer: "Dentures start from £668.00. For Denplan Care, only the lab fee is charged. They are not included in Denplan Essentials." },
-  { question: "How much does a Hygienist consultation cost?", answer: "A Hygienist consultation (45 mins) costs £96.00. It's included in both Denplan Care and Denplan Essentials." },
-  { question: "What's the cost for Invisalign treatment?", answer: "Invisalign treatment ranges from £3,638.00 to £4,995.00 for both arches. This is not applicable to Denplan Care or Denplan Essentials." }
+  { question: "What is Invisalign?", answer: "Invisalign is an orthodontic treatment that uses a series of clear, removable aligners to straighten your teeth. Unlike traditional braces, Invisalign aligners are nearly invisible and can be taken out when eating or brushing your teeth." },
+  { question: "How does Invisalign work?", answer: "Invisalign works by gradually shifting your teeth into the desired position using a set of custom-made aligners. Each aligner is worn for about 1-2 weeks before moving on to the next one in the series, with periodic check-ups at the practice to monitor your progress." },
+  { question: "Is Invisalign right for me?", answer: "Invisalign can treat a wide range of orthodontic issues, including crowded teeth, gaps, and bite problems. During your consultation, our team will assess your needs and determine if Invisalign is the best option for you." },
+  { question: "How long does Invisalign treatment take?", answer: "Treatment duration varies depending on the complexity of your case, but most patients start seeing results within a few months. On average, complete treatment takes between 6 to 18 months." },
+  { question: "How often do I need to wear my aligners?", answer: "For optimal results, Invisalign aligners should be worn for 20-22 hours a day, only removing them to eat, drink (except water), brush, and floss." },
+  { question: "Is Invisalign painful?", answer: "While Invisalign is generally more comfortable than traditional braces, some patients may experience mild discomfort or pressure when switching to a new set of aligners. This is normal and usually subsides after a few days as your teeth adjust." },
+  { question: "How much does Invisalign cost?", answer: "The cost of Invisalign varies based on the complexity of your treatment. During your consultation, we will provide a detailed breakdown of costs and discuss financing options to help you achieve your dream smile affordably." },
+  { question: "Can I eat and drink with Invisalign?", answer: "Yes, one of the advantages of Invisalign is that you can remove the aligners when eating and drinking. However, it’s important to brush your teeth before putting the aligners back in to avoid trapping food particles." },
+  { question: "How do I care for my aligners?", answer: "To keep your aligners clean and clear, rinse them regularly with lukewarm water and brush them gently with a soft toothbrush. Avoid using hot water, which can warp the plastic." },
+  { question: "How do I get started with Invisalign?", answer: "To get started, simply book a consultation with us at Rothley Lodge Dental Practice. We’ll assess your smile, discuss your goals, and create a customized treatment plan to begin your journey to a straighter smile." },
 ];
 
 export const QnA = () => {
@@ -46,7 +43,7 @@ export const QnA = () => {
                 <Typography variant="h6">{item.question}</Typography>
               </AccordionSummary>
               <AccordionDetails sx={{ backgroundColor: '#ffffff', color: '#555' }}>
-                <Typography variant="body1">{item.answer}</Typography>
+                <Typography variant="body1" textAlign={"left"}>{item.answer}</Typography>
               </AccordionDetails>
             </Accordion>
           ))}
