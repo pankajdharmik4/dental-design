@@ -12,7 +12,7 @@ export const About = (props) => {
   };
 
   return (
-    <Box id="about" pt={{ xs: 6, md: 15, }} sx={{backgroundColor: '#13192d',paddingBottom:'5%',paddingLeft:'5%',paddingRight:'5%'}}>
+    <Box id="about" pt={{ xs: 6, md: 15, }} sx={{ backgroundColor: '#13192d', paddingBottom: '5%', paddingLeft: '5%', paddingRight: '5%' }}>
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
@@ -26,7 +26,7 @@ export const About = (props) => {
               <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={beforeImage} alt="Before" />}
                 itemTwo={<ReactCompareSliderImage src={afterImage} alt="After" />}
-                
+
                 style={{ width: '100%', height: 'auto' }}
               />
             </motion.div>
@@ -39,7 +39,7 @@ export const About = (props) => {
               variants={fadeInVariants}
             >
               <Box>
-                <Typography variant="h4" gutterBottom sx={{ position: 'relative', mb: 2, pb: 2,color:'white' }}>
+                <Typography variant="h4" gutterBottom sx={{ position: 'relative', mb: 2, pb: 2, color: 'white' }}>
                   About Us
                   <Divider
                     sx={{
@@ -52,44 +52,27 @@ export const About = (props) => {
                     }}
                   />
                 </Typography>
-                <Typography variant="body1" sx={{color:'white'}} paragraph >
+                <Typography variant="body1" sx={{ color: 'white' }} paragraph >
                   {props.data ? props.data.paragraph : "loading..."}
                 </Typography>
-                <Typography variant="h5" gutterBottom sx={{ fontSize: '22px', mb: 3, color:'white' }}>
-                  Why Choose Us?
+                <Typography variant="h5" gutterBottom sx={{ fontSize: '22px', mb: 3, color: 'white' }}>
+                  Why Choose Rothley Lodge for Invisalign?
                 </Typography>
                 <Grid container spacing={2}>
-                  <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={12}>
                     <List sx={{ padding: 0 }}>
                       {props.data
                         ? props.data.Why.map((d, i) => (
-                            <ListItem key={`${d}-${i}`} sx={{ paddingLeft: 1, paddingBottom: 0.5,color:'white' }}>
-                              <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
-                                <Box component="span" sx={{ color: '#5ca9fb', fontSize: '11px', fontWeight: 300, pr: 1 }}>
-                                  {/* &#xf00c; */}
-                                  <FileDownloadDoneIcon/>
-                                </Box>
-                                {d}
-                              </Typography>
-                            </ListItem>
-                          ))
-                        : "loading"}
-                    </List>
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <List sx={{ padding: 0 }}>
-                      {props.data
-                        ? props.data.Why2.map((d, i) => (
-                            <ListItem key={`${d}-${i}`} sx={{ paddingLeft: 1, paddingBottom: 0.5,color:'white' }}>
-                              <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
-                                <Box component="span" sx={{ color: '#5ca9fb', fontSize: '11px', fontWeight: 300, pr: 1 }}>
-                                  {/* &#xf00c; */}
-                                  <FileDownloadDoneIcon/>
-                                </Box>
-                                {d}
-                              </Typography>
-                            </ListItem>
-                          ))
+                          <ListItem key={`${d}-${i}`} sx={{ paddingLeft: 1, paddingBottom: 0.5, color: 'white' }}>
+                            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
+                              <Box component="span" sx={{ color: '#5ca9fb', fontSize: '11px', fontWeight: 300, pr: 1 }}>
+                                {/* &#xf00c; */}
+                                <FileDownloadDoneIcon />
+                              </Box>
+                              {d}
+                            </Typography>
+                          </ListItem>
+                        ))
                         : "loading"}
                     </List>
                   </Grid>

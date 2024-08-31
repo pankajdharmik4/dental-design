@@ -69,9 +69,8 @@ export const HowitWork = (props) => {
                       {/* Map MUI icons */}
                       {d.name == 'Consultation' && <MedicationLiquid fontSize="large" sx={{ fontSize: 40, color: '#FFF' }} />}
                       {d.name == 'Custom Aligners' && <AutoFixHighIcon sx={{ fontSize: 40, color: '#FFF' }} fontSize="large" />}
-
-                      {d.name == 'Regular Check-ins' && <EditCalendarIcon sx={{ fontSize: 40, color: '#FFF' }} fontSize="large" />}
-                      {d.name == 'Beautiful Results' && <EmojiEmotionsIcon fontSize="large" sx={{ fontSize: 40, color: '#FFF' }} />}
+                      {d.name == 'Wear Your Aligners' && <EditCalendarIcon sx={{ fontSize: 40, color: '#FFF' }} fontSize="large" />}
+                      {d.name == 'Monitor Progress' && <EmojiEmotionsIcon fontSize="large" sx={{ fontSize: 40, color: '#FFF' }} />}
                     </Paper>
                     <Typography variant="h6" gutterBottom>
                       {d.name}

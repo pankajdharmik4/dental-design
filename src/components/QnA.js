@@ -43,7 +43,7 @@ export const QnA = () => {
                 <Typography variant="h6">{item.question}</Typography>
               </AccordionSummary>
               <AccordionDetails sx={{ backgroundColor: '#ffffff', color: '#555' }}>
-                <Typography variant="body1" textAlign={"left"}>{item.answer}</Typography>
+                <Typography variant="body1">{item.answer}</Typography>
               </AccordionDetails>
             </Accordion>
           ))}

@@ -5,6 +5,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import BedIcon from '@mui/icons-material/Bed';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import TableChartIcon from '@mui/icons-material/TableChart';
+import SpeedIcon from '@mui/icons-material/Speed';
 
 export const Features = (props) => {
   const controls = useAnimation();
@@ -32,14 +33,14 @@ export const Features = (props) => {
 
   const getIcon = (title) => {
     switch (title) {
-      case "Virtually Invisible Aligners":
+      case "Invisible Aligners":
         return <VisibilityOffIcon fontSize="large" />;
-      case "Comfortable and Removable":
+      case "Custom Treatment Plan":
         return <BedIcon fontSize="large" />;
-      case "Customized for Your Unique Smile":
+      case "Comfortable Fit":
         return <AutoAwesomeIcon fontSize="large" />;
-      case "Fewer Dental Visits":
-        return <TableChartIcon fontSize="large" />;
+      case "Quick Results":
+        return <SpeedIcon fontSize="large" />;
       default:
         return null;
     }
@@ -56,7 +57,7 @@ export const Features = (props) => {
               mb: 2,
               borderBottom: '4px solid #13192d' // Adjust thickness and color as needed
             }} gutterBottom>
-            Features
+            Why We Love Invisalign
           </Typography>
           <Typography variant="h6" component="h3">
             Discover the benefits of Invisalign – the clear alternative to braces that fits seamlessly into your lifestyle.
